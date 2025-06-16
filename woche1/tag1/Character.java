@@ -15,6 +15,15 @@ public class Character {
         this.lebenserfahrung = alter > 60 ? alter * 20 : alter * 10;
     }
 
+    public void getEigenschaften() {
+        System.out.printf("""
+                        Name: %s,
+                        Alter: %d,
+                        Lebenspunkte: %d,
+                        Lebenserfahrung: %d""",
+                this.nickName, this.alter, this.lebenspunkte, this.lebenserfahrung);
+    }
+
     public int getLegenserfahrung() {
         return this.lebenserfahrung;
     }
@@ -24,6 +33,6 @@ public class Character {
     }
 
     private int getRandomZahl(int obereGrenze) {
-        return (int) Math.round(Math.random() * 1000);
+        return (int) Math.round(Math.random() * obereGrenze);
     }
 }
