@@ -14,10 +14,6 @@ public class Umgebung {
     }
 
     enum Himmelsrichtungen {
-        STRAND,
-        NORDEN,
-        OSTEN,
-        SÜDEN,
-        WESTEN,
+        STRAND, NORDEN, OSTEN, SÜDEN, WESTEN,
     }
 }

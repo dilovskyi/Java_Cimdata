@@ -26,11 +26,10 @@ public class Charakter {
 
     public void getEigenschaften() {
         System.out.printf("""
-                        Name: %s,
-                        Alter: %d,
-                        Lebenspunkte: %d,
-                        Lebenserfahrung: %d\n""",
-                this.nickname, this.alter, this.lebenspunkte, this.lebenserfahrung);
+                Name: %s,
+                Alter: %d,
+                Lebenspunkte: %d,
+                Lebenserfahrung: %d\n""", this.nickname, this.alter, this.lebenspunkte, this.lebenserfahrung);
     }
 
     public int getLegenserfahrung() {
