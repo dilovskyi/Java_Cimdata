@@ -2,14 +2,14 @@ package org.woche1.schlangenInsel;
 
 import java.util.Objects;
 
-public class Charakter {
+public class GameCharakter {
     String nickname;
     String kampfmotto;
     int alter;
     int lebenspunkte;
     int lebenserfahrung;
 
-    public Charakter(String nickname) {
+    public GameCharakter(String nickname) {
         this.nickname = nickname;
         this.alter = getRandomZahl(100);
         this.lebenspunkte = getRandomZahl(1000);
