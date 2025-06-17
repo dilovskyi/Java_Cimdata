@@ -1,15 +1,15 @@
 package org.unterrichtsnotizen.woche1.tag2;
 
+import java.util.Scanner;
+
 public class Main {
-	static String name = "Max";
-	static String name2 = "Max Mustermann";
-
 	public static void main(String[] args) {
-		System.out.println(getLastElement(name));
-		System.out.println(getLastElement(name2));
-	}
+		String username;
+		System.out.println("Wie heißt Du denn?");
+		Scanner sc = new Scanner(System.in);
 
-	private static char getLastElement(String userInput) {
-		return userInput.charAt((userInput.length() - 1));
+		username = sc.nextLine();
+
+		System.out.println("Hallo " + username);
 	}
 }
