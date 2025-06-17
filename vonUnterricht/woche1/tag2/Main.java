@@ -1,4 +1,4 @@
-package org.unterrichtsnotizen.woche1.tag2;
+package org.vonUnterricht.woche1.tag2;
 
 import java.util.Scanner;
 

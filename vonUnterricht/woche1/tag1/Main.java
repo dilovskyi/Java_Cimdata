@@ -1,4 +1,4 @@
-package org.unterrichtsnotizen.woche1.tag1;
+package org.vonUnterricht.woche1.tag1;
 
 public class Main {
 

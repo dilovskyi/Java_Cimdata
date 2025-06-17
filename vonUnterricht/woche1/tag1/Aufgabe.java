@@ -1,4 +1,4 @@
-package org.unterrichtsnotizen.woche1.tag1;
+package org.vonUnterricht.woche1.tag1;
 
 import java.util.Scanner;
 
@@ -14,6 +14,7 @@ public class Aufgabe {
 		// TODO in Charakter class verschieben
 		int userBalance = (int) Math.round((Math.random() * 100) + 1);
 		int befundKosten = 0;
+		int priceLose = 0;
 
 		// Enum passt besser;
 		String richtung1 = "norden";
@@ -43,6 +44,13 @@ public class Aufgabe {
 			befundKosten = (int) Math.round((Math.random() * 100) + 1);
 			userBalance += befundKosten;
 			System.out.println("Glückwunsch! Du hast eine Schatztruhe am Wegensrand gefunden " + befundKosten);
+			System.out.println("Dein Balance beträgt jetzt " + userBalance);
+			break;
+		case "süden":
+			priceLose = (int) Math.round((Math.random() * 100) + 1);
+			userBalance += befundKosten;
+			System.out.println(
+					"Oh, du hast eine schlechte Wahl getroffen. Ein Pirat freift dich an du verlierst " + priceLose);
 			System.out.println("Dein Balance beträgt jetzt " + userBalance);
 			break;
 		default:
