@@ -1,4 +1,4 @@
-package org.woche1.tag1;
+package org.woche1.schlangenInsel;
 
 public class Umgebung {
     Himmelsrichtungen aktuelleStandort;
