@@ -5,8 +5,15 @@ import java.util.Scanner;
 public class Eingaben {
   Scanner sc = new Scanner(System.in);
 
+  public boolean jaNeinAntwort() {
+    return sc.nextLine().toLowerCase().contains("y") ? true : false;
+  }
+
   public void registrierung(UserCharakter userCharakter) {
-    System.out.println("Wie heißt du, Reisender?");
     userCharakter.setName(sc.nextLine());
   };
+
+  public void mottoEingeben(UserCharakter userCharakter) {
+    userCharakter.setMotto(sc.nextLine());
+  }
 }

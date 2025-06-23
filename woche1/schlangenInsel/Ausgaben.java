@@ -19,32 +19,44 @@ public class Ausgaben {
 								""");
 	}
 
+	public void wieHeisstDu() {
+		System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+		System.out.println("Wie heißt du, Reisender?");
+	}
+
 	public void registrierung() {
+		System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
 		System.out.println("Bist du bereit, deinen Charakter zu erstellen?");
+	}
+
+	public void jaNeinFragen(String frage) {
+		System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+		System.out.println(frage);
 	}
 
 	public void personalBegrüssung(String name) {
 		System.out.printf("""
+				~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~;
 				Willkommen auf der Schlankeninsel, %s !
 
 				Deine Reise beginnt am östlichen Strand.
 				Vor dir erstreckt sich dichter Dschungel. Hinter dir liegt das endlose Meer.
 				Du hast keine Wahl! Du musst dir Hilfe suchen!
+
 				""", name);
 	}
 
+	// TODO Refactoring
 	public void showEigenschaftenInfo(Map<String, Object> charInfoObj) {
-		// String name = charInfoObj.get("name");
-		// int alter = charInfoObj.get("alter");
-		// int lebenspunkte = charInfoObj.get("lebenspunkte");
-		// int weisheit = charInfoObj.get("weisheit");
-		// String str = String.format("""
-		// Name: %s,
-		// Alter: %d,
-		// Lebenspunkte: %d,
-		// Lebenserfahrung: %d\n""", name, alter, lebenspunkte,
-		// weisheit);
-		System.out.println(charInfoObj.get("name"));
+		String name = (String) charInfoObj.get("name");
+		int alter = (int) charInfoObj.get("alter");
+		int lebenspunkte = (int) charInfoObj.get("lebenspunkte");
+		int weisheit = (int) charInfoObj.get("weisheit");
+		System.out.printf("""
+				Name: %s,
+				Alter: %d,
+				Lebenspunkte: %d,
+				Weisheit: %d\n""", name, alter, lebenspunkte,
+				weisheit);
 	}
-
 }
