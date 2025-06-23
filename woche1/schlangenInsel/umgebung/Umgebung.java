@@ -1,11 +1,11 @@
 package org.woche1.schlangenInsel.umgebung;
 
 public class Umgebung {
-  Himmelsrichtungen aktuelleStandort;
+  Himmelsrichtungen aktuellerStandort;
   Himmelsrichtungen gespeicherterStandort;
 
   public void respawn() {
-    this.aktuelleStandort = Himmelsrichtungen.STRAND;
+    this.aktuellerStandort = Himmelsrichtungen.STRAND;
     System.out.println("Du bist am Anfang. Viel Glück!");
   }
 

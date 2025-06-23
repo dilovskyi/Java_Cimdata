@@ -5,8 +5,8 @@ import java.util.Scanner;
 public class Eingaben {
   Scanner sc = new Scanner(System.in);
 
-  public String registrierung() {
+  public void registrierung(UserCharakter userCharakter) {
     System.out.println("Wie heißt du, Reisender?");
-    return sc.nextLine();
+    userCharakter.setName(sc.nextLine());
   };
 }

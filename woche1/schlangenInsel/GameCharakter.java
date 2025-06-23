@@ -1,19 +1,29 @@
 package org.woche1.schlangenInsel;
 
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Objects;
 
 public class GameCharakter {
-    String nickname;
+    private String name;
     String kampfmotto;
     int alter;
     int lebenspunkte;
-    int lebenserfahrung;
+    int weisheit;
 
-    public GameCharakter(String nickname) {
-        this.nickname = nickname;
+    public GameCharakter(String name) {
+        this.name = name;
         this.alter = getRandomZahl(100);
         this.lebenspunkte = getRandomZahl(1000);
-        this.lebenserfahrung = alter > 60 ? alter * 20 : alter * 10;
+        this.weisheit = alter > 60 ? alter * 20 : alter * 10;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getName() {
+        return this.name;
     }
 
     public String getMotto() {
@@ -24,20 +34,33 @@ public class GameCharakter {
         this.kampfmotto = Objects.equals(motto, "") ? "keines" : motto;
     }
 
-    public void getEigenschaften() {
-        System.out.printf("""
+    public Map<String, Object> getEigenschaftenInfo() {
+        Map<String, Object> daten = new HashMap<>();
+        daten.put("name", name);
+        daten.put("kampfmotto", kampfmotto);
+        daten.put("alter", alter);
+        daten.put("lebenspunkte", lebenspunkte);
+        daten.put("weisheit", weisheit);
+        return daten;
+    }
+
+    @Override
+    public String toString() {
+        String str = String.format("""
                 Name: %s,
                 Alter: %d,
                 Lebenspunkte: %d,
-                Lebenserfahrung: %d\n""", this.nickname, this.alter, this.lebenspunkte, this.lebenserfahrung);
+                Lebenserfahrung: %d\n""", this.name, this.alter, this.lebenspunkte,
+                this.weisheit);
+        return str;
     }
 
-    public int getLegenserfahrung() {
-        return this.lebenserfahrung;
+    public int getWeisheit() {
+        return this.weisheit;
     }
 
-    public void setLebenserfahrung(int lebenserfahrung) {
-        this.lebenserfahrung = lebenserfahrung;
+    public void setWeisheit(int lebenserfahrung) {
+        this.weisheit = lebenserfahrung;
     }
 
     private int getRandomZahl(int obereGrenze) {
