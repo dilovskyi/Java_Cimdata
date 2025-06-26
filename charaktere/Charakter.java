@@ -1,13 +1,13 @@
-package org;
+package org.charaktere;
 
 import java.util.HashMap;
 import java.util.Map;
 
-public class GameCharakter {
+public class Charakter {
     int lebenspunkte;
     private String name;
 
-    public GameCharakter(String name) {
+    public Charakter(String name) {
         this.name = name;
         this.lebenspunkte = getRandomZahl(1000);
     }

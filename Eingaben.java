@@ -1,12 +1,14 @@
 package org;
 
+import org.charaktere.UserCharakter;
+
 import java.util.Scanner;
 
 public class Eingaben {
     Scanner sc = new Scanner(System.in);
 
     public boolean jaNeinAntwort() {
-        return sc.nextLine().toLowerCase().contains("j") ? true : false;
+        return sc.nextLine().toLowerCase().contains("j");
     }
 
     public void registrierung(UserCharakter userCharakter) {

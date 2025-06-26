@@ -1,10 +1,10 @@
-package org;
+package org.charaktere;
 
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 
-public class UserCharakter extends GameCharakter {
+public class UserCharakter extends Charakter {
     private final int alter;
     private int weisheit;
     private String kampfmotto;

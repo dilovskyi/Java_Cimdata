@@ -1,10 +1,14 @@
 package org;
 
+import org.charaktere.UserCharakter;
+
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
+        Spielwelt umwelt = new Spielwelt();
         Ausgaben ausgaben = new Ausgaben();
         Eingaben eingaben = new Eingaben();
-        // Umgebung umgebung = new Umgebung();
 
         // TODO Singletone;
         UserCharakter userCharakter = new UserCharakter("USErname");
@@ -29,6 +33,9 @@ public class Main {
             eingaben.mottoEingeben(userCharakter);
         }
 
-        System.out.println(userCharakter.getEigenschaftenInfo().get("name"));
+        umwelt.getAlleStandorte();
+
+        Scanner scanner = new Scanner(System.in);
+        umwelt.setAktuellerStandort(scanner.nextLine(), eingaben);
     }
 }

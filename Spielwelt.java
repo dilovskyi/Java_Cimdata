@@ -1,44 +1,44 @@
-package org.umgebung.umwelt;
+package org;
 
-import org.Eingaben;
+import org.standorte.Standort;
+import org.standorte.StandortTyp;
 
 import java.util.ArrayList;
 
-public class Umwelt {
-    private ArrayList<Ereignis> ereignisseArray = new ArrayList<Ereignis>(); // Create an ArrayList object
-    private Standorte aktuellerStandort;
+public class Spielwelt {
+    private ArrayList<Standort> ereignisseArray = new ArrayList<Standort>(); // Create an ArrayList object
+    private StandortTyp aktuellerStandort;
 
-    public Umwelt() {
-        this.aktuellerStandort = Standorte.STRAND;
+    public Spielwelt() {
+        this.aktuellerStandort = StandortTyp.STRAND;
     }
 
     public void respawn() {
-        this.aktuellerStandort = Standorte.STRAND;
+        this.aktuellerStandort = StandortTyp.STRAND;
         System.out.println("Du bist am Anfang. Viel Glück!");
     }
 
     public void getAlleStandorte() {
-        for (Standorte standort : Standorte.values()) {
+        for (StandortTyp standort : StandortTyp.values()) {
             System.out.println(standort.ordinal() + " " + standort.name);
         }
     }
 
-
-    private Standorte getAktuellerStandort() {
+    private StandortTyp getAktuellerStandort() {
         return this.aktuellerStandort;
     }
 
     public void setAktuellerStandort(String userInput, Eingaben eingabeObj) {
         String userStandort = userInput.toUpperCase();
 
-        for (Standorte ort : Standorte.values()) {
+        for (StandortTyp ort : StandortTyp.values()) {
             //ort.name = String value
-            //ort.nem = enum value()
+            //ort.name() = enum value
+            //ort.ordinal()
             if (ort.toString().regionMatches(true, 0, userStandort, 0, 5) || Integer.parseInt(userStandort) == ort.ordinal()) {
 
                 System.out.printf("Klasse! Du hast dich für %s entschieden. Bestätigen Sie bitte\n", ort);
-                this.aktuellerStandort = eingabeObj.jaNeinAntwort() ? ort : this.aktuellerStandort;
-
+                if (eingabeObj.jaNeinAntwort()) this.aktuellerStandort = ort;
             }
         }
         System.out.println("Aktueller Standort ist " + this.aktuellerStandort.name);
@@ -50,10 +50,8 @@ public class Umwelt {
 //            Logger.getAnonymousLogger().warning("Du bist ein schlechter Mensch");
 //            System.out.println("Du darfst nicht");
 //            throw t;
-////            throw new RuntimeException("Du darfst nicht");
-//        }
-
-
+//            throw new RuntimeException("Du darfst nicht");
+    }
 //        switch (userInputStandort) {
 //            case Standorte.STRAND:
 //                setStandort(richtung);
@@ -94,12 +92,11 @@ public class Umwelt {
 //                System.out.println("Deine Eingabe war falsch ! Bitte wiederhole");
 //                setAusgewaelteStandort(userInputStandort);
 //        }
-    }
-
+//    }
 
     //Geschichten estellen
     public void setEreignis() {
-        Ereignis ereignis = new Ereignis(); // erzeugen eine Geschichte
+        Standort ereignis = new Standort(); // erzeugen eine Geschichte
         ereignisseArray.add(ereignis); // spreichern
     }
 

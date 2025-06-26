@@ -1,6 +1,6 @@
-package org.umgebung.umwelt;
+package org.standorte;
 
-public enum Standorte {
+public enum StandortTyp {
     STRAND("Strand"),
     DSCHUNGEL("Dschungel"),
     BRUECKE("Hängebrücke"),
@@ -13,9 +13,7 @@ public enum Standorte {
     GEHEIME_BUCHT("Geheime Bucht");
     public final String name;
 
-    private Standorte(String name) {
+    private StandortTyp(String name) {
         this.name = name;
     }
-
-
 }
