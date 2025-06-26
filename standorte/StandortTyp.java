@@ -11,9 +11,9 @@ public enum StandortTyp {
     NEBELMOOR("Nebenmoor"),
     LAGERPLATZ("Lagerplatz"),
     GEHEIME_BUCHT("Geheime Bucht");
-    public final String name;
+    public final String titel;
 
-    private StandortTyp(String name) {
-        this.name = name;
+    private StandortTyp(String titel) {
+        this.titel = titel;
     }
 }
