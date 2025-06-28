@@ -1,6 +1,6 @@
-package org.standorte;
+package org.locations;
 
-public enum StandortTyp {
+public enum LocationTyp {
     STRAND("Strand"),
     DSCHUNGEL("Dschungel"),
     BRUECKE("Hängebrücke"),
@@ -13,7 +13,7 @@ public enum StandortTyp {
     GEHEIME_BUCHT("Geheime Bucht");
     public final String titel;
 
-    private StandortTyp(String titel) {
+    private LocationTyp(String titel) {
         this.titel = titel;
     }
 }
