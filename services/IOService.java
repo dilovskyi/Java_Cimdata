@@ -1,19 +1,37 @@
-package org;
+package org.services;
+
+import java.util.Scanner;
 
 public class IOService {
-    public void intro() {
-        System.out.println(getText("intro"));
+    private JsonParser parser;
+
+    public IOService(String pfad) {
+        this.parser = new JsonParser(pfad);
     }
 
-    public void wieHeisstDu() {
-        System.out.println(getText("wieHeisstDu"));
+    public void ausgabe(String hauptKey) {
+        System.out.println(this.getText(hauptKey));
     }
 
-    public void mottEingeben() {
-        System.out.println(getText("mottEingeben"));
+    public void ausgabe(String hauptKey, String innereKey) {
+        System.out.println(this.getText(hauptKey, innereKey));
     }
 
-    private String getText(String key) {
-        return "";
+    public String antwortEinlesen() {
+        Scanner scanner = new Scanner(System.in);
+        return scanner.nextLine().trim();
     }
+
+    public void trennlinie() {
+        System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+    }
+
+    private String getText(String hauptKey) {
+        return parser.getText(hauptKey);
+    }
+
+    private String getText(String hauptKey, String innereKey) {
+        return parser.getText(hauptKey, innereKey);
+    }
+
 }
