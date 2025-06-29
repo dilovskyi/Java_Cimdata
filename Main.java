@@ -1,41 +1,45 @@
 package org;
 
 import org.charaktere.UserCharakter;
+import org.services.IOService;
+import org.spiel.Spielwelt;
 
-import java.util.Scanner;
-
+// Entweden mehrere kleine Dateien oder eine große mit key als "themen".
 public class Main {
     public static void main(String[] args) {
-        Spielwelt umwelt = new Spielwelt();
-        Ausgaben ausgaben = new Ausgaben();
-        Eingaben eingaben = new Eingaben();
+        Spielwelt spielwelt = new Spielwelt();
+        IOService ioService = new IOService("spielwelt.json");
+        UserCharakter userCharakter = null;
 
-        // TODO Singletone;
-        UserCharakter userCharakter = new UserCharakter("USErname");
-
-        ausgaben.gameGeschichte();
-
-        ausgaben.registrierung();
-        ausgaben.jaNeinFragen("Tippe Ja/Nein ein");
-        if (eingaben.jaNeinAntwort()) {
-            ausgaben.wieHeisstDu();
-            eingaben.registrierung(userCharakter);
-            ausgaben.personalBegrüssung(userCharakter.getName());
+        ioService.ausgabe("intro");
+        ioService.trennlinie();
+        // -------
+        ioService.ausgabe(new String[]{"registrierung", "frage"});
+        if (ioService.antwortEinlesen().contains("j")) {
+            ioService.ausgabe(new String[]{"registrierung", "antwortJa"});
+            ioService.ausgabe(new String[]{"registrierung", "name"});
+            userCharakter = new UserCharakter(ioService.antwortEinlesen());
+            ioService.trennlinie();
+            ioService.ausgabe("personalBegruesung"); // TODO Keine Namensausgabe
+        } else {
+            ioService.ausgabe(new String[]{"registrierung", "antwortNein"});
         }
+        //--------
 
-        ausgaben.jaNeinFragen("Möchtest du deine Eigenschaften ansehen?");
-        if (eingaben.jaNeinAntwort()) {
-            ausgaben.showEigenschaftenInfo(userCharakter.getEigenschaftenInfo());
+        ioService.ausgabe(new String[]{"charakter", "eigenschaften"});
+        if (ioService.antwortEinlesen().contains("j") && userCharakter == null) {
+            ioService.ausgabe("keinenChar");
+            ioService.ausgabe(new String[]{"registrierung", "name"});
+            userCharakter = new UserCharakter(ioService.antwortEinlesen());
         }
-
-        ausgaben.jaNeinFragen("Möchtest du dein Motto setzen? Es kann dich im Kampf sehr gut ermutigen!");
-        if (eingaben.jaNeinAntwort()) {
-            eingaben.mottoEingeben(userCharakter);
-        }
-
-        umwelt.getAlleStandorte();
-
-        Scanner scanner = new Scanner(System.in);
-        umwelt.setAktuellerStandort(scanner.nextLine(), eingaben);
+        assert userCharakter != null;
+        userCharakter.schowEigenschaften();
+        ioService.trennlinie();
+        ioService.ausgabe(new String[]{"charakter", "setMotto"});
+        userCharakter.setMotto(ioService.antwortEinlesen());
+        ioService.ausgabe(new String[]{"charakter, mottoInfo"});
+        ioService.trennlinie();
+        ioService.ausgabe(new String[]{"locations", "intro"});
+        System.out.print(userCharakter.getMotto());
     }
 }

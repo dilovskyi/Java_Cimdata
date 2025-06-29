@@ -25,6 +25,15 @@ public class JsonParser {
         return rootJsonNode.path(hauptKey).path(innereKey).asText();
     }
 
+    public String getText(String[] keyArray) {
+        JsonNode node = rootJsonNode;
+        for (String key : keyArray) {
+            node = node.path(key);
+        }
+        return node.asText();
+    }
+
+
     // TODO
     private void jsonNodeParcing(JsonNode node) {
 

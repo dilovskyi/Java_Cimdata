@@ -14,6 +14,7 @@ public class UserCharakter extends Charakter {
         super(name);
         this.alter = super.getRandomZahl(100);
         this.weisheit = alter > 60 ? alter * 20 : alter * 10;
+        onInit();
     }
 
     public String getMotto() {
@@ -33,17 +34,29 @@ public class UserCharakter extends Charakter {
     }
 
     @Override
-    public Map<String, Object> getEigenschaftenInfo() {
-        Map<String, Object> daten = new HashMap<>(super.getEigenschaftenInfo());
+    public Map<String, Object> getEigenschaften() {
+        Map<String, Object> daten = new HashMap<>(super.getEigenschaften());
         daten.put("weisheit", this.weisheit);
         daten.put("alter", this.alter);
         daten.put("kampfmotto", this.kampfmotto);
         return daten;
     }
-}
 
-/*
-    daten.put("kampfmotto", this.kampfmotto);
-    daten.put("alter", this.alter);
-    daten.put("weisheit", this.weisheit);
- */
+    private void onInit() {
+        System.out.printf("""
+                Charakter names <%s> wurde erfolgreich erstell.
+                Alle Charakteristigen wurde zufaligeweisse eingestzt
+                """, this.getName());
+    }
+
+    @Override
+    public void schowEigenschaften() {
+        String str = String.format("""
+                        Name: %s,
+                        Alter: %d,
+                        Lebenspunkte: %d,
+                        Lebenserfahrung: %d\n""", this.getName(), this.alter, this.lebenspunkte,
+                this.weisheit);
+        System.out.printf(str);
+    }
+}

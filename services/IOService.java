@@ -3,6 +3,7 @@ package org.services;
 import java.util.Scanner;
 
 public class IOService {
+    final private Scanner scanner = new Scanner(System.in);
     private JsonParser parser;
 
     public IOService(String pfad) {
@@ -17,9 +18,13 @@ public class IOService {
         System.out.println(this.getText(hauptKey, innereKey));
     }
 
+    public void ausgabe(String[] keyArray) {
+        System.out.println(this.getText(keyArray));
+    }
+
+
     public String antwortEinlesen() {
-        Scanner scanner = new Scanner(System.in);
-        return scanner.nextLine().trim();
+        return scanner.nextLine().trim().toLowerCase();
     }
 
     public void trennlinie() {
@@ -32,6 +37,10 @@ public class IOService {
 
     private String getText(String hauptKey, String innereKey) {
         return parser.getText(hauptKey, innereKey);
+    }
+
+    private String getText(String[] keyArray) {
+        return parser.getText(keyArray);
     }
 
 }
