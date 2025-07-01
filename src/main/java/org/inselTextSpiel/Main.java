@@ -1,8 +1,8 @@
-package org;
+package org.inselTextSpiel;
 
-import org.charaktere.UserCharakter;
-import org.services.IOService;
-import org.spiel.Spielwelt;
+import org.inselTextSpiel.charaktere.UserCharakter;
+import org.inselTextSpiel.services.IOService;
+import org.inselTextSpiel.spiel.Spielwelt;
 
 // Entweden mehrere kleine Dateien oder eine große mit key als "themen".
 public class Main {

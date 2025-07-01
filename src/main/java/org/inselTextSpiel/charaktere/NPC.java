@@ -1,4 +1,4 @@
-package org.charaktere;
+package org.inselTextSpiel.charaktere;
 
 public class NPC extends Charakter {
     String name;

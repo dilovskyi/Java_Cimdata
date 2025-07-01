@@ -1,4 +1,4 @@
-package org.locations;
+package org.inselTextSpiel.locations;
 
 public enum LocationTyp {
     STRAND("Strand"),

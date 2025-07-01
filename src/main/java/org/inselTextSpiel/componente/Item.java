@@ -1,4 +1,4 @@
-package org.componente;
+package org.inselTextSpiel.componente;
 
 public class Item {
 

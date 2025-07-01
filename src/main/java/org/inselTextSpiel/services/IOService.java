@@ -1,4 +1,4 @@
-package org.services;
+package org.inselTextSpiel.services;
 
 import java.util.Scanner;
 

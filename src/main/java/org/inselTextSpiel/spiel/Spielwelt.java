@@ -1,10 +1,10 @@
-package org.spiel;
+package org.inselTextSpiel.spiel;
 
-import org.Director;
-import org.builders.LocationBuilder;
-import org.locations.Location;
-import org.locations.LocationTyp;
-import org.services.IOService;
+import org.inselTextSpiel.Director;
+import org.inselTextSpiel.builders.LocationBuilder;
+import org.inselTextSpiel.locations.Location;
+import org.inselTextSpiel.locations.LocationTyp;
+import org.inselTextSpiel.services.IOService;
 
 import java.util.ArrayList;
 

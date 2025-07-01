@@ -1,4 +1,4 @@
-package org.charaktere;
+package org.inselTextSpiel.charaktere;
 
 import java.util.HashMap;
 import java.util.Map;

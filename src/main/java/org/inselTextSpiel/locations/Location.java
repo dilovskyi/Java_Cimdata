@@ -1,7 +1,7 @@
-package org.locations;
+package org.inselTextSpiel.locations;
 
-import org.charaktere.NPC;
-import org.componente.Item;
+import org.inselTextSpiel.charaktere.NPC;
+import org.inselTextSpiel.componente.Item;
 
 import java.util.ArrayList;
 
