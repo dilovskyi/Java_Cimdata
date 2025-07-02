@@ -1,7 +1,6 @@
 package org.inselTextSpiel.locations;
 
-import org.inselTextSpiel.charaktere.NPC;
-import org.inselTextSpiel.componente.Item;
+import org.inselTextSpiel.componente.Scene;
 
 import java.util.ArrayList;
 
@@ -9,9 +8,7 @@ public class Location {
     private final LocationTyp typ;
     private final String titel;
     private final String beschreibung;
-    private final String music;
-    private final ArrayList<NPC> npcArrayList;
-    private final ArrayList<Item> itemArrayList;
+    private final ArrayList<Scene> sceneArrayList;
     private final Location vorherigerLocation;
     private final Location neachsterLocation;
 
@@ -19,18 +16,14 @@ public class Location {
             LocationTyp typ,
             String titel,
             String beschreibung,
-            String music,
-            ArrayList<NPC> npcArrayList,
-            ArrayList<Item> itemArrayList,
+            ArrayList<Scene> sceneArrayList,
             Location vorherigerLocation,
             Location neachsterLocation
     ) {
         this.typ = typ;
         this.titel = titel;
         this.beschreibung = beschreibung;
-        this.music = music;
-        this.npcArrayList = npcArrayList;
-        this.itemArrayList = itemArrayList;
+        this.sceneArrayList = sceneArrayList;
         this.vorherigerLocation = vorherigerLocation;
         this.neachsterLocation = neachsterLocation;
     }
@@ -47,16 +40,9 @@ public class Location {
         return this.beschreibung;
     }
 
-    public String getMusic() {
-        return this.music;
-    }
 
-    public ArrayList<NPC> getNpcArrayList() {
-        return this.npcArrayList;
-    }
-
-    public ArrayList<Item> getItemArrayList() {
-        return this.itemArrayList;
+    public ArrayList<Scene> getSceneArrayList() {
+        return this.sceneArrayList;
     }
 
     public Location getVorherigerLocation() {

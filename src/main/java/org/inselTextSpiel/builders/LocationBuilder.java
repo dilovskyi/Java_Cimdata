@@ -1,7 +1,6 @@
 package org.inselTextSpiel.builders;
 
-import org.inselTextSpiel.charaktere.NPC;
-import org.inselTextSpiel.componente.Item;
+import org.inselTextSpiel.componente.Scene;
 import org.inselTextSpiel.locations.Location;
 import org.inselTextSpiel.locations.LocationTyp;
 
@@ -12,10 +11,9 @@ public class LocationBuilder implements Builder {
     private String titel;
     private String beschreibung;
     private String music;
-    private ArrayList<NPC> npcArrayList;
-    private ArrayList<Item> itemArrayList;
-    private Location vorherigerLocation;
-    private Location neachsterLocation;
+    private ArrayList<Scene> sceneArrayList = new ArrayList<Scene>();
+    private Location vorherigerLocation = null;
+    private Location neachsterLocation = null;
 
     @Override
     public void setTyp(LocationTyp typ) {
@@ -34,30 +32,24 @@ public class LocationBuilder implements Builder {
     }
 
     @Override
-    public void setMusic() {
-        this.music = music;
+    public void setSceneArrayList(ArrayList<Scene> sceneArrayList) {
+        this.sceneArrayList = sceneArrayList;
     }
 
-    @Override
-    public void setNpcArrayList(ArrayList<NPC> npcArrayList) {
-        this.npcArrayList = npcArrayList;
-    }
-
-    @Override
-    public void setItemArrayList(ArrayList<Item> itemArrayList) {
-        this.itemArrayList = itemArrayList;
+    public void addScene(Scene scene) {
+        this.sceneArrayList.add(scene);
     }
 
     //Welche Standorte sind von hier aus erreichbar
     // doppelt verkettete Liste (Doubly linked list)
     @Override
-    public void setVorherigerOrt(Location location) {
-
+    public void setVorherigerLocation(Location location) {
+        this.vorherigerLocation = location;
     }
 
     @Override
-    public void setNeachsterOrt(Location location) {
-
+    public void setNeachsterLocation(Location location) {
+        this.neachsterLocation = location;
     }
 
     public Location build() {
@@ -65,9 +57,7 @@ public class LocationBuilder implements Builder {
                 this.typ,
                 this.titel,
                 this.beschreibung,
-                this.music,
-                this.npcArrayList,
-                this.itemArrayList,
+                this.sceneArrayList,
                 this.vorherigerLocation,
                 this.neachsterLocation);
     }

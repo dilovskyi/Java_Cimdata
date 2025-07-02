@@ -1,7 +1,6 @@
 package org.inselTextSpiel.builders;
 
-import org.inselTextSpiel.charaktere.NPC;
-import org.inselTextSpiel.componente.Item;
+import org.inselTextSpiel.componente.Scene;
 import org.inselTextSpiel.locations.Location;
 import org.inselTextSpiel.locations.LocationTyp;
 
@@ -14,15 +13,9 @@ public interface Builder {
 
     void setBeschreibung(String beschreibung);
 
-    void setMusic();
+    void setSceneArrayList(ArrayList<Scene> sceneArrayList);
 
-    void setNpcArrayList(ArrayList<NPC> npcArrayList);
+    void setVorherigerLocation(Location location);
 
-    void setItemArrayList(ArrayList<Item> itemArrayList);
-
-    //Welche Standorte sind von hier aus erreichbar
-    // doppelt verkettete Liste (Doubly linked list)
-    void setVorherigerOrt(Location location);
-
-    void setNeachsterOrt(Location location);
+    void setNeachsterLocation(Location location);
 }
