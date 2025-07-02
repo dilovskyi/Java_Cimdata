@@ -1,22 +1,3 @@
 {
-  "intro": "╔════════════════════════════════════════════╗\n║     WILLKOMMEN AUF DER SCHLANGEN INSEL     ║\n╚════════════════════════════════════════════╝\n\nEin kalter Nebel liegt über dem Strand, als Du benommen die Augen öffnest.\nDu hast keine Erinnerung daran, wie Du hierhergekommen bist – nur das Tosen\nder Wellen und das entfernte Rufen fremder Stimmen.\n",
-  "personalBegruesung": "Willkommen auf der Schlankeninsel,\nDeine Reise beginnt am östlichen Strand.\nVor dir erstreckt sich dichter Dschungel. Hinter dir liegt das endlose Meer.\nDu hast keine Wahl! Du musst dir Hilfe suchen!\n",
-  "registrierung": {
-    "name": "Wie heißt du, Reisender?",
-    "frage": "Bist du bereit, deinen Charakter zu erstellen?",
-    "optionen": "Gib bitte ein: ja / nein",
-    "antwortJa": "Super! Lass uns loslegen mit deiner Charaktererstellung.",
-    "antwortNein": "Okay, du kannst später jederzeit zurückkommen."
-  },
-  "charakter": {
-    "keinenChar": "Du hast noch keinen erstell!",
-    "eigenschaften": "Möchtest du deine Eigenschaften ansehen?",
-    "setMotto": "Setze bitte deinen Motto!\nEs kann dich im Kampf sehr gut ermutigen!",
-    "mottoInfo": "Klasse! Abhängig von der Location erhältst du zusätzliche Charakteristiken."
-  },
-  "locations": {
-    "intro": "Eine seltsame Karte liegt in Deiner Tasche! Dein Abenteuer beginnt – **jetzt**.\nUnd...",
-    "strand": {
-    }
-  }
+  "intro": "╔════════════════════════════════════════════╗\n║     WILLKOMMEN AUF DER SCHLANGEN INSEL     ║\n╚════════════════════════════════════════════╝\n\nEin kalter Nebel liegt über dem Strand, als Du benommen die Augen öffnest.\nDu hast keine Erinnerung daran, wie Du hierhergekommen bist – nur das Tosen\nder Wellen und das entfernte Rufen fremder Stimmen."
 }

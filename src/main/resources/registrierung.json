@@ -1,0 +1,7 @@
+{
+  "name": "Wie heißt du, Reisender?",
+  "frage": "Bist du bereit, deinen Charakter zu erstellen?",
+  "optionen": "Gib bitte ein: ja / nein",
+  "antwortJa": "Super! Lass uns loslegen mit deiner Charaktererstellung.",
+  "antwortNein": "Okay, du kannst später jederzeit zurückkommen."
+}

@@ -1,0 +1,53 @@
+{
+  "intro": "Deine Reise beginnt am östlichen Strand.\nVor dir erstreckt sich dichter Dschungel. Hinter dir liegt das endlose Meer.\nDu hast keine Wahl! Du musst dir Hilfe suchen!\nDein Abenteuer beginnt – **jetzt**.\nUnd...",
+  "strand": {
+    "typ": "STRAND",
+    "titel": "Strand",
+    "beschreibung": "Du wachst auf dem warmen, feuchten Sand auf. Das Meer rauscht hinter dir, vor dir Dschungel."
+  },
+  "dschungel": {
+    "typ": "DSCHUNGEL",
+    "titel": "Dschungel",
+    "beschreibung": "Du stehst am Rand des dichten Dschungels. Du hörst Vögel und das Rascheln von Blättern."
+  },
+  "bruecke": {
+    "typ": "BRUECKE",
+    "titel": "Hängebrücke",
+    "beschreibung": "Eine alte, morsche Brücke spannt sich über einen tiefen Abgrund. Jeder Schritt knarrt."
+  },
+  "verlassene_huette": {
+    "typ": "VERLASSENE_HUETTE",
+    "titel": "Verlassene Hütte",
+    "beschreibung": "Eine verfallene Hütte mit eingerissenen Wänden – aber vielleicht findest du hier etwas."
+  },
+  "dunkle_hoehle": {
+    "typ": "DUNKLE_HOEHLE",
+    "titel": "Dunkle Höhle",
+    "beschreibung": "Es ist kalt und feucht. Tropfwasser. Vielleicht verbirgt sich hier ein Schatz… oder etwas anderes."
+  },
+  "wasserfall": {
+    "typ": "WASSERFALL",
+    "titel": "Wasserfall",
+    "beschreibung": "Hinter dem rauschenden Wasser scheint eine geheime Passage zu liegen."
+  },
+  "verfluchter_tempel": {
+    "typ": "VERFLUCHTER_TEMPEL",
+    "titel": "Verfluchter Tempel",
+    "beschreibung": "Mächtige Steinstatuen bewachen den Eingang. Ein Ort voller Geheimnisse und Prüfungen."
+  },
+  "nebelmoor": {
+    "typ": "NEBELMOOR",
+    "titel": "Nebelmoor",
+    "beschreibung": "Dichter Nebel schränkt deine Sicht ein. Alles ist feucht, modrig und unheimlich."
+  },
+  "lagerplatz": {
+    "typ": "LAGERPLATZ",
+    "titel": "Lagerplatz",
+    "beschreibung": "Ein sicherer Ort mit Feuerstelle. Hier kannst du rasten und neue Kraft schöpfen."
+  },
+  "geheime_bucht": {
+    "typ": "GEHEIME_BUCHT",
+    "titel": "Geheime Bucht",
+    "beschreibung": "Eine kleine, geschützte Bucht mit einem alten Ruderboot. Vielleicht ein Fluchtweg?"
+  }
+}
