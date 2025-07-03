@@ -1,30 +1,30 @@
 package org.inselTextSpiel;
 
-import org.inselTextSpiel.builders.LocationBuilder;
-import org.inselTextSpiel.szenen.Szene;
+import org.inselTextSpiel.locations.Location;
+import org.inselTextSpiel.locations.LocationDirector;
 import org.inselTextSpiel.locations.LocationTyp;
+import org.inselTextSpiel.services.JsonParser;
 
 import java.util.ArrayList;
 import java.util.Map;
 
 public class Director {
+    LocationDirector locationDirector = new LocationDirector();
+    JsonParser parser;
 
-    public void startLocationConstruiren(LocationBuilder builder) {
-        builder.setTyp(LocationTyp.STRAND);
-        builder.setTitel(LocationTyp.STRAND.titel);
-        builder.setBeschreibung("""
-                Deine Reise beginnt am östlichen Strand.
-                Vor dir erstreckt sich dichter Dschungel. Hinter dir liegt das endlose Meer.
-                Du hast keine Wahl! Du musst dir Hilfe suchen!
-                """);
-        builder.setSzenesArrayList(new ArrayList<Szene>());
-//        builder.setVorherigerOrt();
-//        builder.setNeachsterOrt();
+    public Director(JsonParser parser) {
+        this.parser = parser;
     }
 
-    public void locationVonMapConstruieren(LocationBuilder builder, Map<String, String> locationMap) {
-        builder.setTyp(LocationTyp.valueOf(locationMap.get("typ")));
-        builder.setTitel(locationMap.get("titel"));
-        builder.setBeschreibung(locationMap.get("beschreibung"));
+    public ArrayList<Location> buildAllLokations() {
+        ArrayList<Location> locationsArrayList = new ArrayList<Location>();
+
+        for (LocationTyp locationTyp : LocationTyp.values()) {
+            Map<String, String> locationMap = parser.getKeyValue("locations", locationTyp.name().toLowerCase());
+            Location location = locationDirector.buildLocationVonMap(locationMap);
+
+            locationsArrayList.add(location);
+        }
+        return locationsArrayList;
     }
 }
