@@ -1,6 +1,6 @@
 package org.inselTextSpiel.locations;
 
-import org.inselTextSpiel.componente.Scene;
+import org.inselTextSpiel.szenen.Szene;
 
 import java.util.ArrayList;
 
@@ -8,7 +8,7 @@ public class Location {
     private final LocationTyp typ;
     private final String titel;
     private final String beschreibung;
-    private final ArrayList<Scene> sceneArrayList;
+    private final ArrayList<Szene> szenesArrayList;
     private final Location vorherigerLocation;
     private final Location neachsterLocation;
 
@@ -16,14 +16,14 @@ public class Location {
             LocationTyp typ,
             String titel,
             String beschreibung,
-            ArrayList<Scene> sceneArrayList,
+            ArrayList<Szene> szenesArrayList,
             Location vorherigerLocation,
             Location neachsterLocation
     ) {
         this.typ = typ;
         this.titel = titel;
         this.beschreibung = beschreibung;
-        this.sceneArrayList = sceneArrayList;
+        this.szenesArrayList = szenesArrayList;
         this.vorherigerLocation = vorherigerLocation;
         this.neachsterLocation = neachsterLocation;
     }
@@ -41,8 +41,8 @@ public class Location {
     }
 
 
-    public ArrayList<Scene> getSceneArrayList() {
-        return this.sceneArrayList;
+    public ArrayList<Szene> getSzenesArrayList() {
+        return this.szenesArrayList;
     }
 
     public Location getVorherigerLocation() {

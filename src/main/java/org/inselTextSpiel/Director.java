@@ -1,7 +1,7 @@
 package org.inselTextSpiel;
 
 import org.inselTextSpiel.builders.LocationBuilder;
-import org.inselTextSpiel.componente.Scene;
+import org.inselTextSpiel.szenen.Szene;
 import org.inselTextSpiel.locations.LocationTyp;
 
 import java.util.ArrayList;
@@ -17,7 +17,7 @@ public class Director {
                 Vor dir erstreckt sich dichter Dschungel. Hinter dir liegt das endlose Meer.
                 Du hast keine Wahl! Du musst dir Hilfe suchen!
                 """);
-        builder.setSceneArrayList(new ArrayList<Scene>());
+        builder.setSzenesArrayList(new ArrayList<Szene>());
 //        builder.setVorherigerOrt();
 //        builder.setNeachsterOrt();
     }

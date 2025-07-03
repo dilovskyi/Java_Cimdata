@@ -1,6 +1,6 @@
 package org.inselTextSpiel.builders;
 
-import org.inselTextSpiel.componente.Scene;
+import org.inselTextSpiel.szenen.Szene;
 import org.inselTextSpiel.locations.Location;
 import org.inselTextSpiel.locations.LocationTyp;
 
@@ -13,7 +13,7 @@ public interface Builder {
 
     void setBeschreibung(String beschreibung);
 
-    void setSceneArrayList(ArrayList<Scene> sceneArrayList);
+    void setSzenesArrayList(ArrayList<Szene> szenesArrayList);
 
     void setVorherigerLocation(Location location);
 

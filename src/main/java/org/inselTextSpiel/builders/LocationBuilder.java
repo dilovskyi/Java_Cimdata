@@ -1,6 +1,6 @@
 package org.inselTextSpiel.builders;
 
-import org.inselTextSpiel.componente.Scene;
+import org.inselTextSpiel.szenen.Szene;
 import org.inselTextSpiel.locations.Location;
 import org.inselTextSpiel.locations.LocationTyp;
 
@@ -11,7 +11,7 @@ public class LocationBuilder implements Builder {
     private String titel;
     private String beschreibung;
     private String music;
-    private ArrayList<Scene> sceneArrayList = new ArrayList<Scene>();
+    private ArrayList<Szene> szenesArrayList = new ArrayList<Szene>();
     private Location vorherigerLocation = null;
     private Location neachsterLocation = null;
 
@@ -32,12 +32,12 @@ public class LocationBuilder implements Builder {
     }
 
     @Override
-    public void setSceneArrayList(ArrayList<Scene> sceneArrayList) {
-        this.sceneArrayList = sceneArrayList;
+    public void setSzenesArrayList(ArrayList<Szene> szenesArrayList) {
+        this.szenesArrayList = szenesArrayList;
     }
 
-    public void addScene(Scene scene) {
-        this.sceneArrayList.add(scene);
+    public void addScene(Szene scene) {
+        this.szenesArrayList.add(scene);
     }
 
     //Welche Standorte sind von hier aus erreichbar
@@ -57,7 +57,7 @@ public class LocationBuilder implements Builder {
                 this.typ,
                 this.titel,
                 this.beschreibung,
-                this.sceneArrayList,
+                this.szenesArrayList,
                 this.vorherigerLocation,
                 this.neachsterLocation);
     }
