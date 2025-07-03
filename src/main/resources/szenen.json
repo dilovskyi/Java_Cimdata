@@ -1,0 +1,1627 @@
+{
+  "leicht": [
+    {
+      "id": "s1000",
+      "typ": "FALLE",
+      "beschreibung": "Ein Pfeil schießt aus der Wand.",
+      "entscheidung": {
+        "entschärfen": {
+          "wirkung": "Du versuchst, die Falle zu entschärfen.",
+          "chance": "mittel"
+        },
+        "zurückziehen": {
+          "wirkung": "Du gehst ein Stück zurück."
+        }
+      }
+    },
+    {
+      "id": "s1001",
+      "typ": "KAMPF",
+      "beschreibung": "Ein wilder Panther springt aus dem Gebüsch!",
+      "gegner": {
+        "name": "Skelett",
+        "hp": 53,
+        "staerke": 7
+      },
+      "entscheidung": {
+        "angreifen": {
+          "wirkung": "Du stürzt dich mutig in den Kampf.",
+          "chance": "hoch"
+        },
+        "fliehen": {
+          "wirkung": "Du versuchst zu fliehen.",
+          "hpMinus": 5
+        }
+      }
+    },
+    {
+      "id": "s1002",
+      "typ": "FALLE",
+      "beschreibung": "Ein Seil zieht sich plötzlich um deine Füße.",
+      "entscheidung": {
+        "entschärfen": {
+          "wirkung": "Du versuchst, die Falle zu entschärfen.",
+          "chance": "mittel"
+        },
+        "zurückziehen": {
+          "wirkung": "Du gehst ein Stück zurück."
+        }
+      }
+    },
+    {
+      "id": "s1003",
+      "typ": "KAMPF",
+      "beschreibung": "Ein wilder Panther springt aus dem Gebüsch!",
+      "gegner": {
+        "name": "Skelett",
+        "hp": 36,
+        "staerke": 9
+      },
+      "entscheidung": {
+        "angreifen": {
+          "wirkung": "Du stürzt dich mutig in den Kampf.",
+          "chance": "hoch"
+        },
+        "fliehen": {
+          "wirkung": "Du versuchst zu fliehen.",
+          "hpMinus": 5
+        }
+      }
+    },
+    {
+      "id": "s1004",
+      "typ": "FALLE",
+      "beschreibung": "Ein Seil zieht sich plötzlich um deine Füße.",
+      "entscheidung": {
+        "entschärfen": {
+          "wirkung": "Du versuchst, die Falle zu entschärfen.",
+          "chance": "mittel"
+        },
+        "zurückziehen": {
+          "wirkung": "Du gehst ein Stück zurück."
+        }
+      }
+    },
+    {
+      "id": "s1005",
+      "typ": "HERAUSFORDERUNG",
+      "beschreibung": "Du stehst vor einem Rätselstein.",
+      "entscheidung": {
+        "lösen": {
+          "wirkung": "Du versuchst das Rätsel zu lösen.",
+          "belohnung": "GEHEIMNIS ENTSCHLÜSSELT"
+        },
+        "überspringen": {
+          "wirkung": "Du vermeidest das Risiko."
+        }
+      }
+    },
+    {
+      "id": "s1006",
+      "typ": "SHOP",
+      "beschreibung": "Ein Händler winkt dir zu.",
+      "npc": {
+        "name": "Händler",
+        "items": [
+          "TRANK",
+          "ESSEN",
+          "RUESTUNG"
+        ]
+      },
+      "entscheidung": {
+        "kaufen": {
+          "kosten": "5 GOLD",
+          "item": "TRANK"
+        },
+        "weitergehen": {
+          "wirkung": "Du lehnst das Angebot ab."
+        }
+      }
+    },
+    {
+      "id": "s1007",
+      "typ": "FUND",
+      "beschreibung": "Ein funkelnder Edelstein liegt im Gras.",
+      "entscheidung": {
+        "einsammeln": {
+          "item": "GOLD",
+          "hpPlus": 0
+        },
+        "ignorieren": {
+          "wirkung": "Du lässt es liegen."
+        }
+      }
+    },
+    {
+      "id": "s1008",
+      "typ": "HERAUSFORDERUNG",
+      "beschreibung": "Du stehst vor einem Rätselstein.",
+      "entscheidung": {
+        "lösen": {
+          "wirkung": "Du versuchst das Rätsel zu lösen.",
+          "belohnung": "GEHEIMNIS ENTSCHLÜSSELT"
+        },
+        "überspringen": {
+          "wirkung": "Du vermeidest das Risiko."
+        }
+      }
+    },
+    {
+      "id": "s1009",
+      "typ": "BEGEGNUNG",
+      "beschreibung": "Ein Kind fragt dich nach dem Weg.",
+      "entscheidung": {
+        "sprechen": {
+          "info": "Du erhältst einen Hinweis auf einen verborgenen Schatz.",
+          "mutPlus": 1
+        },
+        "weitergehen": {
+          "wirkung": "Du gehst weiter ohne Kontakt aufzunehmen."
+        }
+      }
+    },
+    {
+      "id": "s1010",
+      "typ": "VERLUST",
+      "beschreibung": "Deine Waffe zerbricht.",
+      "entscheidung": {
+        "akzeptieren": {
+          "wirkung": "Du nimmst den Verlust hin.",
+          "mutPlus": 1
+        },
+        "suchen": {
+          "wirkung": "Du versuchst, das Verlorene zu finden.",
+          "chance": "niedrig"
+        }
+      }
+    },
+    {
+      "id": "s1011",
+      "typ": "SHOP",
+      "beschreibung": "Ein alter Karren steht verlassen, aber offen.",
+      "npc": {
+        "name": "Händler",
+        "items": [
+          "TRANK",
+          "ESSEN",
+          "RUESTUNG"
+        ]
+      },
+      "entscheidung": {
+        "kaufen": {
+          "kosten": "5 GOLD",
+          "item": "TRANK"
+        },
+        "weitergehen": {
+          "wirkung": "Du lehnst das Angebot ab."
+        }
+      }
+    },
+    {
+      "id": "s1012",
+      "typ": "KAMPF",
+      "beschreibung": "Ein Bandit lauert dir auf.",
+      "gegner": {
+        "name": "Bandit",
+        "hp": 80,
+        "staerke": 9
+      },
+      "entscheidung": {
+        "angreifen": {
+          "wirkung": "Du stürzt dich mutig in den Kampf.",
+          "chance": "hoch"
+        },
+        "fliehen": {
+          "wirkung": "Du versuchst zu fliehen.",
+          "hpMinus": 5
+        }
+      }
+    },
+    {
+      "id": "s1013",
+      "typ": "FALLE",
+      "beschreibung": "Eine Fallgrube öffnet sich unter dir.",
+      "entscheidung": {
+        "entschärfen": {
+          "wirkung": "Du versuchst, die Falle zu entschärfen.",
+          "chance": "mittel"
+        },
+        "zurückziehen": {
+          "wirkung": "Du gehst ein Stück zurück."
+        }
+      }
+    },
+    {
+      "id": "s1014",
+      "typ": "FUND",
+      "beschreibung": "Ein funkelnder Edelstein liegt im Gras.",
+      "entscheidung": {
+        "einsammeln": {
+          "item": "HEILTRANK",
+          "hpPlus": 5
+        },
+        "ignorieren": {
+          "wirkung": "Du lässt es liegen."
+        }
+      }
+    },
+    {
+      "id": "s1015",
+      "typ": "FUND",
+      "beschreibung": "Du findest eine Truhe unter einem Baum.",
+      "entscheidung": {
+        "einsammeln": {
+          "item": "GOLD",
+          "hpPlus": 0
+        },
+        "ignorieren": {
+          "wirkung": "Du lässt es liegen."
+        }
+      }
+    },
+    {
+      "id": "s1016",
+      "typ": "FALLE",
+      "beschreibung": "Ein Seil zieht sich plötzlich um deine Füße.",
+      "entscheidung": {
+        "entschärfen": {
+          "wirkung": "Du versuchst, die Falle zu entschärfen.",
+          "chance": "mittel"
+        },
+        "zurückziehen": {
+          "wirkung": "Du gehst ein Stück zurück."
+        }
+      }
+    },
+    {
+      "id": "s1017",
+      "typ": "HERAUSFORDERUNG",
+      "beschreibung": "Ein schwankender Baumstamm dient als Brücke.",
+      "entscheidung": {
+        "lösen": {
+          "wirkung": "Du versuchst das Rätsel zu lösen.",
+          "belohnung": "GEHEIMNIS ENTSCHLÜSSELT"
+        },
+        "überspringen": {
+          "wirkung": "Du vermeidest das Risiko."
+        }
+      }
+    },
+    {
+      "id": "s1018",
+      "typ": "STORY",
+      "beschreibung": "Ein geheimnisvolles Symbol ist in den Stein geritzt.",
+      "entscheidung": {
+        "untersuchen": {
+          "hinweis": "Du entdeckst ein uraltes Symbol, das mit einem Mythos verknüpft ist.",
+          "mutPlus": 1
+        },
+        "ignorieren": {
+          "wirkung": "Du gehst weiter, ohne dich umzusehen."
+        }
+      }
+    },
+    {
+      "id": "s1019",
+      "typ": "SHOP",
+      "beschreibung": "Ein Händler winkt dir zu.",
+      "npc": {
+        "name": "Händler",
+        "items": [
+          "TRANK",
+          "ESSEN",
+          "RUESTUNG"
+        ]
+      },
+      "entscheidung": {
+        "kaufen": {
+          "kosten": "5 GOLD",
+          "item": "TRANK"
+        },
+        "weitergehen": {
+          "wirkung": "Du lehnst das Angebot ab."
+        }
+      }
+    },
+    {
+      "id": "s1020",
+      "typ": "SHOP",
+      "beschreibung": "Ein alter Karren steht verlassen, aber offen.",
+      "npc": {
+        "name": "Händler",
+        "items": [
+          "TRANK",
+          "ESSEN",
+          "RUESTUNG"
+        ]
+      },
+      "entscheidung": {
+        "kaufen": {
+          "kosten": "5 GOLD",
+          "item": "TRANK"
+        },
+        "weitergehen": {
+          "wirkung": "Du lehnst das Angebot ab."
+        }
+      }
+    },
+    {
+      "id": "s1021",
+      "typ": "HERAUSFORDERUNG",
+      "beschreibung": "Du musst durch einen engen Tunnel kriechen.",
+      "entscheidung": {
+        "lösen": {
+          "wirkung": "Du versuchst das Rätsel zu lösen.",
+          "belohnung": "GEHEIMNIS ENTSCHLÜSSELT"
+        },
+        "überspringen": {
+          "wirkung": "Du vermeidest das Risiko."
+        }
+      }
+    },
+    {
+      "id": "s1022",
+      "typ": "STORY",
+      "beschreibung": "Ein geheimnisvolles Symbol ist in den Stein geritzt.",
+      "entscheidung": {
+        "untersuchen": {
+          "hinweis": "Du entdeckst ein uraltes Symbol, das mit einem Mythos verknüpft ist.",
+          "mutPlus": 1
+        },
+        "ignorieren": {
+          "wirkung": "Du gehst weiter, ohne dich umzusehen."
+        }
+      }
+    },
+    {
+      "id": "s1023",
+      "typ": "FALLE",
+      "beschreibung": "Ein Seil zieht sich plötzlich um deine Füße.",
+      "entscheidung": {
+        "entschärfen": {
+          "wirkung": "Du versuchst, die Falle zu entschärfen.",
+          "chance": "mittel"
+        },
+        "zurückziehen": {
+          "wirkung": "Du gehst ein Stück zurück."
+        }
+      }
+    },
+    {
+      "id": "s1024",
+      "typ": "KAMPF",
+      "beschreibung": "Ein Bandit lauert dir auf.",
+      "gegner": {
+        "name": "Bandit",
+        "hp": 91,
+        "staerke": 7
+      },
+      "entscheidung": {
+        "angreifen": {
+          "wirkung": "Du stürzt dich mutig in den Kampf.",
+          "chance": "hoch"
+        },
+        "fliehen": {
+          "wirkung": "Du versuchst zu fliehen.",
+          "hpMinus": 5
+        }
+      }
+    },
+    {
+      "id": "s1025",
+      "typ": "STORY",
+      "beschreibung": "Ein geheimnisvolles Symbol ist in den Stein geritzt.",
+      "entscheidung": {
+        "untersuchen": {
+          "hinweis": "Du entdeckst ein uraltes Symbol, das mit einem Mythos verknüpft ist.",
+          "mutPlus": 1
+        },
+        "ignorieren": {
+          "wirkung": "Du gehst weiter, ohne dich umzusehen."
+        }
+      }
+    },
+    {
+      "id": "s1026",
+      "typ": "BEGEGNUNG",
+      "beschreibung": "Ein weiser alter Mann bietet dir Tee an.",
+      "entscheidung": {
+        "sprechen": {
+          "info": "Du erhältst einen Hinweis auf einen verborgenen Schatz.",
+          "mutPlus": 1
+        },
+        "weitergehen": {
+          "wirkung": "Du gehst weiter ohne Kontakt aufzunehmen."
+        }
+      }
+    },
+    {
+      "id": "s1027",
+      "typ": "VERLUST",
+      "beschreibung": "Ein Tier schnappt sich dein Proviant.",
+      "entscheidung": {
+        "akzeptieren": {
+          "wirkung": "Du nimmst den Verlust hin.",
+          "mutPlus": 1
+        },
+        "suchen": {
+          "wirkung": "Du versuchst, das Verlorene zu finden.",
+          "chance": "niedrig"
+        }
+      }
+    },
+    {
+      "id": "s1028",
+      "typ": "HERAUSFORDERUNG",
+      "beschreibung": "Du stehst vor einem Rätselstein.",
+      "entscheidung": {
+        "lösen": {
+          "wirkung": "Du versuchst das Rätsel zu lösen.",
+          "belohnung": "GEHEIMNIS ENTSCHLÜSSELT"
+        },
+        "überspringen": {
+          "wirkung": "Du vermeidest das Risiko."
+        }
+      }
+    },
+    {
+      "id": "s1029",
+      "typ": "VERLUST",
+      "beschreibung": "Ein Tier schnappt sich dein Proviant.",
+      "entscheidung": {
+        "akzeptieren": {
+          "wirkung": "Du nimmst den Verlust hin.",
+          "mutPlus": 1
+        },
+        "suchen": {
+          "wirkung": "Du versuchst, das Verlorene zu finden.",
+          "chance": "niedrig"
+        }
+      }
+    },
+    {
+      "id": "s1030",
+      "typ": "SHOP",
+      "beschreibung": "Ein alter Karren steht verlassen, aber offen.",
+      "npc": {
+        "name": "Händler",
+        "items": [
+          "TRANK",
+          "ESSEN",
+          "RUESTUNG"
+        ]
+      },
+      "entscheidung": {
+        "kaufen": {
+          "kosten": "5 GOLD",
+          "item": "TRANK"
+        },
+        "weitergehen": {
+          "wirkung": "Du lehnst das Angebot ab."
+        }
+      }
+    },
+    {
+      "id": "s1031",
+      "typ": "VERLUST",
+      "beschreibung": "Deine Waffe zerbricht.",
+      "entscheidung": {
+        "akzeptieren": {
+          "wirkung": "Du nimmst den Verlust hin.",
+          "mutPlus": 1
+        },
+        "suchen": {
+          "wirkung": "Du versuchst, das Verlorene zu finden.",
+          "chance": "niedrig"
+        }
+      }
+    },
+    {
+      "id": "s1032",
+      "typ": "FALLE",
+      "beschreibung": "Ein Pfeil schießt aus der Wand.",
+      "entscheidung": {
+        "entschärfen": {
+          "wirkung": "Du versuchst, die Falle zu entschärfen.",
+          "chance": "mittel"
+        },
+        "zurückziehen": {
+          "wirkung": "Du gehst ein Stück zurück."
+        }
+      }
+    }
+  ],
+  "medium": [
+    {
+      "id": "s2000",
+      "typ": "FUND",
+      "beschreibung": "Ein funkelnder Edelstein liegt im Gras.",
+      "entscheidung": {
+        "einsammeln": {
+          "item": "GOLD",
+          "hpPlus": 0
+        },
+        "ignorieren": {
+          "wirkung": "Du lässt es liegen."
+        }
+      }
+    },
+    {
+      "id": "s2001",
+      "typ": "VERLUST",
+      "beschreibung": "Du verlierst ein paar Münzen in einem Spalt.",
+      "entscheidung": {
+        "akzeptieren": {
+          "wirkung": "Du nimmst den Verlust hin.",
+          "mutPlus": 1
+        },
+        "suchen": {
+          "wirkung": "Du versuchst, das Verlorene zu finden.",
+          "chance": "niedrig"
+        }
+      }
+    },
+    {
+      "id": "s2002",
+      "typ": "VERLUST",
+      "beschreibung": "Deine Waffe zerbricht.",
+      "entscheidung": {
+        "akzeptieren": {
+          "wirkung": "Du nimmst den Verlust hin.",
+          "mutPlus": 1
+        },
+        "suchen": {
+          "wirkung": "Du versuchst, das Verlorene zu finden.",
+          "chance": "niedrig"
+        }
+      }
+    },
+    {
+      "id": "s2003",
+      "typ": "SHOP",
+      "beschreibung": "Ein alter Karren steht verlassen, aber offen.",
+      "npc": {
+        "name": "Händler",
+        "items": [
+          "TRANK",
+          "ESSEN",
+          "RUESTUNG"
+        ]
+      },
+      "entscheidung": {
+        "kaufen": {
+          "kosten": "5 GOLD",
+          "item": "TRANK"
+        },
+        "weitergehen": {
+          "wirkung": "Du lehnst das Angebot ab."
+        }
+      }
+    },
+    {
+      "id": "s2004",
+      "typ": "FUND",
+      "beschreibung": "Du findest eine Truhe unter einem Baum.",
+      "entscheidung": {
+        "einsammeln": {
+          "item": "GOLD",
+          "hpPlus": 10
+        },
+        "ignorieren": {
+          "wirkung": "Du lässt es liegen."
+        }
+      }
+    },
+    {
+      "id": "s2005",
+      "typ": "KAMPF",
+      "beschreibung": "Ein wilder Panther springt aus dem Gebüsch!",
+      "gegner": {
+        "name": "Panther",
+        "hp": 98,
+        "staerke": 12
+      },
+      "entscheidung": {
+        "angreifen": {
+          "wirkung": "Du stürzt dich mutig in den Kampf.",
+          "chance": "hoch"
+        },
+        "fliehen": {
+          "wirkung": "Du versuchst zu fliehen.",
+          "hpMinus": 5
+        }
+      }
+    },
+    {
+      "id": "s2006",
+      "typ": "VERLUST",
+      "beschreibung": "Deine Waffe zerbricht.",
+      "entscheidung": {
+        "akzeptieren": {
+          "wirkung": "Du nimmst den Verlust hin.",
+          "mutPlus": 1
+        },
+        "suchen": {
+          "wirkung": "Du versuchst, das Verlorene zu finden.",
+          "chance": "niedrig"
+        }
+      }
+    },
+    {
+      "id": "s2007",
+      "typ": "KAMPF",
+      "beschreibung": "Ein verfluchter Skelettkrieger erhebt sich aus dem Boden.",
+      "gegner": {
+        "name": "Bandit",
+        "hp": 21,
+        "staerke": 6
+      },
+      "entscheidung": {
+        "angreifen": {
+          "wirkung": "Du stürzt dich mutig in den Kampf.",
+          "chance": "hoch"
+        },
+        "fliehen": {
+          "wirkung": "Du versuchst zu fliehen.",
+          "hpMinus": 5
+        }
+      }
+    },
+    {
+      "id": "s2008",
+      "typ": "HERAUSFORDERUNG",
+      "beschreibung": "Du musst durch einen engen Tunnel kriechen.",
+      "entscheidung": {
+        "lösen": {
+          "wirkung": "Du versuchst das Rätsel zu lösen.",
+          "belohnung": "GEHEIMNIS ENTSCHLÜSSELT"
+        },
+        "überspringen": {
+          "wirkung": "Du vermeidest das Risiko."
+        }
+      }
+    },
+    {
+      "id": "s2009",
+      "typ": "SHOP",
+      "beschreibung": "Ein reisender Koch bietet dir Proviant an.",
+      "npc": {
+        "name": "Händler",
+        "items": [
+          "TRANK",
+          "ESSEN",
+          "RUESTUNG"
+        ]
+      },
+      "entscheidung": {
+        "kaufen": {
+          "kosten": "5 GOLD",
+          "item": "TRANK"
+        },
+        "weitergehen": {
+          "wirkung": "Du lehnst das Angebot ab."
+        }
+      }
+    },
+    {
+      "id": "s2010",
+      "typ": "STORY",
+      "beschreibung": "Ein geheimnisvolles Symbol ist in den Stein geritzt.",
+      "entscheidung": {
+        "untersuchen": {
+          "hinweis": "Du entdeckst ein uraltes Symbol, das mit einem Mythos verknüpft ist.",
+          "mutPlus": 1
+        },
+        "ignorieren": {
+          "wirkung": "Du gehst weiter, ohne dich umzusehen."
+        }
+      }
+    },
+    {
+      "id": "s2011",
+      "typ": "BEGEGNUNG",
+      "beschreibung": "Ein weiser alter Mann bietet dir Tee an.",
+      "entscheidung": {
+        "sprechen": {
+          "info": "Du erhältst einen Hinweis auf einen verborgenen Schatz.",
+          "mutPlus": 1
+        },
+        "weitergehen": {
+          "wirkung": "Du gehst weiter ohne Kontakt aufzunehmen."
+        }
+      }
+    },
+    {
+      "id": "s2012",
+      "typ": "SHOP",
+      "beschreibung": "Ein reisender Koch bietet dir Proviant an.",
+      "npc": {
+        "name": "Händler",
+        "items": [
+          "TRANK",
+          "ESSEN",
+          "RUESTUNG"
+        ]
+      },
+      "entscheidung": {
+        "kaufen": {
+          "kosten": "5 GOLD",
+          "item": "TRANK"
+        },
+        "weitergehen": {
+          "wirkung": "Du lehnst das Angebot ab."
+        }
+      }
+    },
+    {
+      "id": "s2013",
+      "typ": "STORY",
+      "beschreibung": "Ein altes Wandbild erzählt von einem verlorenen König.",
+      "entscheidung": {
+        "untersuchen": {
+          "hinweis": "Du entdeckst ein uraltes Symbol, das mit einem Mythos verknüpft ist.",
+          "mutPlus": 1
+        },
+        "ignorieren": {
+          "wirkung": "Du gehst weiter, ohne dich umzusehen."
+        }
+      }
+    },
+    {
+      "id": "s2014",
+      "typ": "FALLE",
+      "beschreibung": "Eine Fallgrube öffnet sich unter dir.",
+      "entscheidung": {
+        "entschärfen": {
+          "wirkung": "Du versuchst, die Falle zu entschärfen.",
+          "chance": "mittel"
+        },
+        "zurückziehen": {
+          "wirkung": "Du gehst ein Stück zurück."
+        }
+      }
+    },
+    {
+      "id": "s2015",
+      "typ": "FUND",
+      "beschreibung": "Eine leere Flasche mit einem geheimen Zettel drin.",
+      "entscheidung": {
+        "einsammeln": {
+          "item": "SCHLUESSEL",
+          "hpPlus": 5
+        },
+        "ignorieren": {
+          "wirkung": "Du lässt es liegen."
+        }
+      }
+    },
+    {
+      "id": "s2016",
+      "typ": "SHOP",
+      "beschreibung": "Ein reisender Koch bietet dir Proviant an.",
+      "npc": {
+        "name": "Händler",
+        "items": [
+          "TRANK",
+          "ESSEN",
+          "RUESTUNG"
+        ]
+      },
+      "entscheidung": {
+        "kaufen": {
+          "kosten": "5 GOLD",
+          "item": "TRANK"
+        },
+        "weitergehen": {
+          "wirkung": "Du lehnst das Angebot ab."
+        }
+      }
+    },
+    {
+      "id": "s2017",
+      "typ": "KAMPF",
+      "beschreibung": "Ein Bandit lauert dir auf.",
+      "gegner": {
+        "name": "Bandit",
+        "hp": 50,
+        "staerke": 8
+      },
+      "entscheidung": {
+        "angreifen": {
+          "wirkung": "Du stürzt dich mutig in den Kampf.",
+          "chance": "hoch"
+        },
+        "fliehen": {
+          "wirkung": "Du versuchst zu fliehen.",
+          "hpMinus": 5
+        }
+      }
+    },
+    {
+      "id": "s2018",
+      "typ": "HERAUSFORDERUNG",
+      "beschreibung": "Ein schwankender Baumstamm dient als Brücke.",
+      "entscheidung": {
+        "lösen": {
+          "wirkung": "Du versuchst das Rätsel zu lösen.",
+          "belohnung": "GEHEIMNIS ENTSCHLÜSSELT"
+        },
+        "überspringen": {
+          "wirkung": "Du vermeidest das Risiko."
+        }
+      }
+    },
+    {
+      "id": "s2019",
+      "typ": "FUND",
+      "beschreibung": "Eine leere Flasche mit einem geheimen Zettel drin.",
+      "entscheidung": {
+        "einsammeln": {
+          "item": "HEILTRANK",
+          "hpPlus": 10
+        },
+        "ignorieren": {
+          "wirkung": "Du lässt es liegen."
+        }
+      }
+    },
+    {
+      "id": "s2020",
+      "typ": "VERLUST",
+      "beschreibung": "Du verlierst ein paar Münzen in einem Spalt.",
+      "entscheidung": {
+        "akzeptieren": {
+          "wirkung": "Du nimmst den Verlust hin.",
+          "mutPlus": 1
+        },
+        "suchen": {
+          "wirkung": "Du versuchst, das Verlorene zu finden.",
+          "chance": "niedrig"
+        }
+      }
+    },
+    {
+      "id": "s2021",
+      "typ": "HERAUSFORDERUNG",
+      "beschreibung": "Du musst durch einen engen Tunnel kriechen.",
+      "entscheidung": {
+        "lösen": {
+          "wirkung": "Du versuchst das Rätsel zu lösen.",
+          "belohnung": "GEHEIMNIS ENTSCHLÜSSELT"
+        },
+        "überspringen": {
+          "wirkung": "Du vermeidest das Risiko."
+        }
+      }
+    },
+    {
+      "id": "s2022",
+      "typ": "BEGEGNUNG",
+      "beschreibung": "Ein Kind fragt dich nach dem Weg.",
+      "entscheidung": {
+        "sprechen": {
+          "info": "Du erhältst einen Hinweis auf einen verborgenen Schatz.",
+          "mutPlus": 1
+        },
+        "weitergehen": {
+          "wirkung": "Du gehst weiter ohne Kontakt aufzunehmen."
+        }
+      }
+    },
+    {
+      "id": "s2023",
+      "typ": "SHOP",
+      "beschreibung": "Ein reisender Koch bietet dir Proviant an.",
+      "npc": {
+        "name": "Händler",
+        "items": [
+          "TRANK",
+          "ESSEN",
+          "RUESTUNG"
+        ]
+      },
+      "entscheidung": {
+        "kaufen": {
+          "kosten": "5 GOLD",
+          "item": "TRANK"
+        },
+        "weitergehen": {
+          "wirkung": "Du lehnst das Angebot ab."
+        }
+      }
+    },
+    {
+      "id": "s2024",
+      "typ": "FUND",
+      "beschreibung": "Du findest eine Truhe unter einem Baum.",
+      "entscheidung": {
+        "einsammeln": {
+          "item": "GOLD",
+          "hpPlus": 0
+        },
+        "ignorieren": {
+          "wirkung": "Du lässt es liegen."
+        }
+      }
+    },
+    {
+      "id": "s2025",
+      "typ": "KAMPF",
+      "beschreibung": "Ein Bandit lauert dir auf.",
+      "gegner": {
+        "name": "Skelett",
+        "hp": 94,
+        "staerke": 10
+      },
+      "entscheidung": {
+        "angreifen": {
+          "wirkung": "Du stürzt dich mutig in den Kampf.",
+          "chance": "hoch"
+        },
+        "fliehen": {
+          "wirkung": "Du versuchst zu fliehen.",
+          "hpMinus": 5
+        }
+      }
+    },
+    {
+      "id": "s2026",
+      "typ": "HERAUSFORDERUNG",
+      "beschreibung": "Ein schwankender Baumstamm dient als Brücke.",
+      "entscheidung": {
+        "lösen": {
+          "wirkung": "Du versuchst das Rätsel zu lösen.",
+          "belohnung": "GEHEIMNIS ENTSCHLÜSSELT"
+        },
+        "überspringen": {
+          "wirkung": "Du vermeidest das Risiko."
+        }
+      }
+    },
+    {
+      "id": "s2027",
+      "typ": "BEGEGNUNG",
+      "beschreibung": "Ein Kind fragt dich nach dem Weg.",
+      "entscheidung": {
+        "sprechen": {
+          "info": "Du erhältst einen Hinweis auf einen verborgenen Schatz.",
+          "mutPlus": 1
+        },
+        "weitergehen": {
+          "wirkung": "Du gehst weiter ohne Kontakt aufzunehmen."
+        }
+      }
+    },
+    {
+      "id": "s2028",
+      "typ": "KAMPF",
+      "beschreibung": "Ein Bandit lauert dir auf.",
+      "gegner": {
+        "name": "Panther",
+        "hp": 68,
+        "staerke": 14
+      },
+      "entscheidung": {
+        "angreifen": {
+          "wirkung": "Du stürzt dich mutig in den Kampf.",
+          "chance": "hoch"
+        },
+        "fliehen": {
+          "wirkung": "Du versuchst zu fliehen.",
+          "hpMinus": 5
+        }
+      }
+    },
+    {
+      "id": "s2029",
+      "typ": "HERAUSFORDERUNG",
+      "beschreibung": "Du musst durch einen engen Tunnel kriechen.",
+      "entscheidung": {
+        "lösen": {
+          "wirkung": "Du versuchst das Rätsel zu lösen.",
+          "belohnung": "GEHEIMNIS ENTSCHLÜSSELT"
+        },
+        "überspringen": {
+          "wirkung": "Du vermeidest das Risiko."
+        }
+      }
+    },
+    {
+      "id": "s2030",
+      "typ": "FUND",
+      "beschreibung": "Du findest eine Truhe unter einem Baum.",
+      "entscheidung": {
+        "einsammeln": {
+          "item": "GOLD",
+          "hpPlus": 10
+        },
+        "ignorieren": {
+          "wirkung": "Du lässt es liegen."
+        }
+      }
+    },
+    {
+      "id": "s2031",
+      "typ": "BEGEGNUNG",
+      "beschreibung": "Ein Kind fragt dich nach dem Weg.",
+      "entscheidung": {
+        "sprechen": {
+          "info": "Du erhältst einen Hinweis auf einen verborgenen Schatz.",
+          "mutPlus": 1
+        },
+        "weitergehen": {
+          "wirkung": "Du gehst weiter ohne Kontakt aufzunehmen."
+        }
+      }
+    },
+    {
+      "id": "s2032",
+      "typ": "VERLUST",
+      "beschreibung": "Deine Waffe zerbricht.",
+      "entscheidung": {
+        "akzeptieren": {
+          "wirkung": "Du nimmst den Verlust hin.",
+          "mutPlus": 1
+        },
+        "suchen": {
+          "wirkung": "Du versuchst, das Verlorene zu finden.",
+          "chance": "niedrig"
+        }
+      }
+    }
+  ],
+  "hard": [
+    {
+      "id": "s3000",
+      "typ": "SHOP",
+      "beschreibung": "Ein reisender Koch bietet dir Proviant an.",
+      "npc": {
+        "name": "Händler",
+        "items": [
+          "TRANK",
+          "ESSEN",
+          "RUESTUNG"
+        ]
+      },
+      "entscheidung": {
+        "kaufen": {
+          "kosten": "5 GOLD",
+          "item": "TRANK"
+        },
+        "weitergehen": {
+          "wirkung": "Du lehnst das Angebot ab."
+        }
+      }
+    },
+    {
+      "id": "s3001",
+      "typ": "BEGEGNUNG",
+      "beschreibung": "Ein Kind fragt dich nach dem Weg.",
+      "entscheidung": {
+        "sprechen": {
+          "info": "Du erhältst einen Hinweis auf einen verborgenen Schatz.",
+          "mutPlus": 1
+        },
+        "weitergehen": {
+          "wirkung": "Du gehst weiter ohne Kontakt aufzunehmen."
+        }
+      }
+    },
+    {
+      "id": "s3002",
+      "typ": "VERLUST",
+      "beschreibung": "Deine Waffe zerbricht.",
+      "entscheidung": {
+        "akzeptieren": {
+          "wirkung": "Du nimmst den Verlust hin.",
+          "mutPlus": 1
+        },
+        "suchen": {
+          "wirkung": "Du versuchst, das Verlorene zu finden.",
+          "chance": "niedrig"
+        }
+      }
+    },
+    {
+      "id": "s3003",
+      "typ": "VERLUST",
+      "beschreibung": "Ein Tier schnappt sich dein Proviant.",
+      "entscheidung": {
+        "akzeptieren": {
+          "wirkung": "Du nimmst den Verlust hin.",
+          "mutPlus": 1
+        },
+        "suchen": {
+          "wirkung": "Du versuchst, das Verlorene zu finden.",
+          "chance": "niedrig"
+        }
+      }
+    },
+    {
+      "id": "s3004",
+      "typ": "FALLE",
+      "beschreibung": "Ein Pfeil schießt aus der Wand.",
+      "entscheidung": {
+        "entschärfen": {
+          "wirkung": "Du versuchst, die Falle zu entschärfen.",
+          "chance": "mittel"
+        },
+        "zurückziehen": {
+          "wirkung": "Du gehst ein Stück zurück."
+        }
+      }
+    },
+    {
+      "id": "s3005",
+      "typ": "BEGEGNUNG",
+      "beschreibung": "Ein Kind fragt dich nach dem Weg.",
+      "entscheidung": {
+        "sprechen": {
+          "info": "Du erhältst einen Hinweis auf einen verborgenen Schatz.",
+          "mutPlus": 1
+        },
+        "weitergehen": {
+          "wirkung": "Du gehst weiter ohne Kontakt aufzunehmen."
+        }
+      }
+    },
+    {
+      "id": "s3006",
+      "typ": "STORY",
+      "beschreibung": "Du findest eine Tagebuchseite im Wind.",
+      "entscheidung": {
+        "untersuchen": {
+          "hinweis": "Du entdeckst ein uraltes Symbol, das mit einem Mythos verknüpft ist.",
+          "mutPlus": 1
+        },
+        "ignorieren": {
+          "wirkung": "Du gehst weiter, ohne dich umzusehen."
+        }
+      }
+    },
+    {
+      "id": "s3007",
+      "typ": "VERLUST",
+      "beschreibung": "Deine Waffe zerbricht.",
+      "entscheidung": {
+        "akzeptieren": {
+          "wirkung": "Du nimmst den Verlust hin.",
+          "mutPlus": 1
+        },
+        "suchen": {
+          "wirkung": "Du versuchst, das Verlorene zu finden.",
+          "chance": "niedrig"
+        }
+      }
+    },
+    {
+      "id": "s3008",
+      "typ": "VERLUST",
+      "beschreibung": "Deine Waffe zerbricht.",
+      "entscheidung": {
+        "akzeptieren": {
+          "wirkung": "Du nimmst den Verlust hin.",
+          "mutPlus": 1
+        },
+        "suchen": {
+          "wirkung": "Du versuchst, das Verlorene zu finden.",
+          "chance": "niedrig"
+        }
+      }
+    },
+    {
+      "id": "s3009",
+      "typ": "STORY",
+      "beschreibung": "Ein geheimnisvolles Symbol ist in den Stein geritzt.",
+      "entscheidung": {
+        "untersuchen": {
+          "hinweis": "Du entdeckst ein uraltes Symbol, das mit einem Mythos verknüpft ist.",
+          "mutPlus": 1
+        },
+        "ignorieren": {
+          "wirkung": "Du gehst weiter, ohne dich umzusehen."
+        }
+      }
+    },
+    {
+      "id": "s3010",
+      "typ": "KAMPF",
+      "beschreibung": "Ein wilder Panther springt aus dem Gebüsch!",
+      "gegner": {
+        "name": "Panther",
+        "hp": 43,
+        "staerke": 20
+      },
+      "entscheidung": {
+        "angreifen": {
+          "wirkung": "Du stürzt dich mutig in den Kampf.",
+          "chance": "hoch"
+        },
+        "fliehen": {
+          "wirkung": "Du versuchst zu fliehen.",
+          "hpMinus": 5
+        }
+      }
+    },
+    {
+      "id": "s3011",
+      "typ": "FALLE",
+      "beschreibung": "Ein Pfeil schießt aus der Wand.",
+      "entscheidung": {
+        "entschärfen": {
+          "wirkung": "Du versuchst, die Falle zu entschärfen.",
+          "chance": "mittel"
+        },
+        "zurückziehen": {
+          "wirkung": "Du gehst ein Stück zurück."
+        }
+      }
+    },
+    {
+      "id": "s3012",
+      "typ": "FUND",
+      "beschreibung": "Eine leere Flasche mit einem geheimen Zettel drin.",
+      "entscheidung": {
+        "einsammeln": {
+          "item": "HEILTRANK",
+          "hpPlus": 10
+        },
+        "ignorieren": {
+          "wirkung": "Du lässt es liegen."
+        }
+      }
+    },
+    {
+      "id": "s3013",
+      "typ": "STORY",
+      "beschreibung": "Ein geheimnisvolles Symbol ist in den Stein geritzt.",
+      "entscheidung": {
+        "untersuchen": {
+          "hinweis": "Du entdeckst ein uraltes Symbol, das mit einem Mythos verknüpft ist.",
+          "mutPlus": 1
+        },
+        "ignorieren": {
+          "wirkung": "Du gehst weiter, ohne dich umzusehen."
+        }
+      }
+    },
+    {
+      "id": "s3014",
+      "typ": "SHOP",
+      "beschreibung": "Ein Händler winkt dir zu.",
+      "npc": {
+        "name": "Händler",
+        "items": [
+          "TRANK",
+          "ESSEN",
+          "RUESTUNG"
+        ]
+      },
+      "entscheidung": {
+        "kaufen": {
+          "kosten": "5 GOLD",
+          "item": "TRANK"
+        },
+        "weitergehen": {
+          "wirkung": "Du lehnst das Angebot ab."
+        }
+      }
+    },
+    {
+      "id": "s3015",
+      "typ": "BEGEGNUNG",
+      "beschreibung": "Ein Kind fragt dich nach dem Weg.",
+      "entscheidung": {
+        "sprechen": {
+          "info": "Du erhältst einen Hinweis auf einen verborgenen Schatz.",
+          "mutPlus": 1
+        },
+        "weitergehen": {
+          "wirkung": "Du gehst weiter ohne Kontakt aufzunehmen."
+        }
+      }
+    },
+    {
+      "id": "s3016",
+      "typ": "HERAUSFORDERUNG",
+      "beschreibung": "Du stehst vor einem Rätselstein.",
+      "entscheidung": {
+        "lösen": {
+          "wirkung": "Du versuchst das Rätsel zu lösen.",
+          "belohnung": "GEHEIMNIS ENTSCHLÜSSELT"
+        },
+        "überspringen": {
+          "wirkung": "Du vermeidest das Risiko."
+        }
+      }
+    },
+    {
+      "id": "s3017",
+      "typ": "FUND",
+      "beschreibung": "Eine leere Flasche mit einem geheimen Zettel drin.",
+      "entscheidung": {
+        "einsammeln": {
+          "item": "SCHLUESSEL",
+          "hpPlus": 5
+        },
+        "ignorieren": {
+          "wirkung": "Du lässt es liegen."
+        }
+      }
+    },
+    {
+      "id": "s3018",
+      "typ": "SHOP",
+      "beschreibung": "Ein alter Karren steht verlassen, aber offen.",
+      "npc": {
+        "name": "Händler",
+        "items": [
+          "TRANK",
+          "ESSEN",
+          "RUESTUNG"
+        ]
+      },
+      "entscheidung": {
+        "kaufen": {
+          "kosten": "5 GOLD",
+          "item": "TRANK"
+        },
+        "weitergehen": {
+          "wirkung": "Du lehnst das Angebot ab."
+        }
+      }
+    },
+    {
+      "id": "s3019",
+      "typ": "VERLUST",
+      "beschreibung": "Du verlierst ein paar Münzen in einem Spalt.",
+      "entscheidung": {
+        "akzeptieren": {
+          "wirkung": "Du nimmst den Verlust hin.",
+          "mutPlus": 1
+        },
+        "suchen": {
+          "wirkung": "Du versuchst, das Verlorene zu finden.",
+          "chance": "niedrig"
+        }
+      }
+    },
+    {
+      "id": "s3020",
+      "typ": "SHOP",
+      "beschreibung": "Ein reisender Koch bietet dir Proviant an.",
+      "npc": {
+        "name": "Händler",
+        "items": [
+          "TRANK",
+          "ESSEN",
+          "RUESTUNG"
+        ]
+      },
+      "entscheidung": {
+        "kaufen": {
+          "kosten": "5 GOLD",
+          "item": "TRANK"
+        },
+        "weitergehen": {
+          "wirkung": "Du lehnst das Angebot ab."
+        }
+      }
+    },
+    {
+      "id": "s3021",
+      "typ": "SHOP",
+      "beschreibung": "Ein Händler winkt dir zu.",
+      "npc": {
+        "name": "Händler",
+        "items": [
+          "TRANK",
+          "ESSEN",
+          "RUESTUNG"
+        ]
+      },
+      "entscheidung": {
+        "kaufen": {
+          "kosten": "5 GOLD",
+          "item": "TRANK"
+        },
+        "weitergehen": {
+          "wirkung": "Du lehnst das Angebot ab."
+        }
+      }
+    },
+    {
+      "id": "s3022",
+      "typ": "STORY",
+      "beschreibung": "Du findest eine Tagebuchseite im Wind.",
+      "entscheidung": {
+        "untersuchen": {
+          "hinweis": "Du entdeckst ein uraltes Symbol, das mit einem Mythos verknüpft ist.",
+          "mutPlus": 1
+        },
+        "ignorieren": {
+          "wirkung": "Du gehst weiter, ohne dich umzusehen."
+        }
+      }
+    },
+    {
+      "id": "s3023",
+      "typ": "KAMPF",
+      "beschreibung": "Ein verfluchter Skelettkrieger erhebt sich aus dem Boden.",
+      "gegner": {
+        "name": "Skelett",
+        "hp": 76,
+        "staerke": 17
+      },
+      "entscheidung": {
+        "angreifen": {
+          "wirkung": "Du stürzt dich mutig in den Kampf.",
+          "chance": "hoch"
+        },
+        "fliehen": {
+          "wirkung": "Du versuchst zu fliehen.",
+          "hpMinus": 5
+        }
+      }
+    },
+    {
+      "id": "s3024",
+      "typ": "HERAUSFORDERUNG",
+      "beschreibung": "Du stehst vor einem Rätselstein.",
+      "entscheidung": {
+        "lösen": {
+          "wirkung": "Du versuchst das Rätsel zu lösen.",
+          "belohnung": "GEHEIMNIS ENTSCHLÜSSELT"
+        },
+        "überspringen": {
+          "wirkung": "Du vermeidest das Risiko."
+        }
+      }
+    },
+    {
+      "id": "s3025",
+      "typ": "FUND",
+      "beschreibung": "Du findest eine Truhe unter einem Baum.",
+      "entscheidung": {
+        "einsammeln": {
+          "item": "SCHLUESSEL",
+          "hpPlus": 0
+        },
+        "ignorieren": {
+          "wirkung": "Du lässt es liegen."
+        }
+      }
+    },
+    {
+      "id": "s3026",
+      "typ": "SHOP",
+      "beschreibung": "Ein Händler winkt dir zu.",
+      "npc": {
+        "name": "Händler",
+        "items": [
+          "TRANK",
+          "ESSEN",
+          "RUESTUNG"
+        ]
+      },
+      "entscheidung": {
+        "kaufen": {
+          "kosten": "5 GOLD",
+          "item": "TRANK"
+        },
+        "weitergehen": {
+          "wirkung": "Du lehnst das Angebot ab."
+        }
+      }
+    },
+    {
+      "id": "s3027",
+      "typ": "SHOP",
+      "beschreibung": "Ein reisender Koch bietet dir Proviant an.",
+      "npc": {
+        "name": "Händler",
+        "items": [
+          "TRANK",
+          "ESSEN",
+          "RUESTUNG"
+        ]
+      },
+      "entscheidung": {
+        "kaufen": {
+          "kosten": "5 GOLD",
+          "item": "TRANK"
+        },
+        "weitergehen": {
+          "wirkung": "Du lehnst das Angebot ab."
+        }
+      }
+    },
+    {
+      "id": "s3028",
+      "typ": "VERLUST",
+      "beschreibung": "Ein Tier schnappt sich dein Proviant.",
+      "entscheidung": {
+        "akzeptieren": {
+          "wirkung": "Du nimmst den Verlust hin.",
+          "mutPlus": 1
+        },
+        "suchen": {
+          "wirkung": "Du versuchst, das Verlorene zu finden.",
+          "chance": "niedrig"
+        }
+      }
+    },
+    {
+      "id": "s3029",
+      "typ": "HERAUSFORDERUNG",
+      "beschreibung": "Du stehst vor einem Rätselstein.",
+      "entscheidung": {
+        "lösen": {
+          "wirkung": "Du versuchst das Rätsel zu lösen.",
+          "belohnung": "GEHEIMNIS ENTSCHLÜSSELT"
+        },
+        "überspringen": {
+          "wirkung": "Du vermeidest das Risiko."
+        }
+      }
+    },
+    {
+      "id": "s3030",
+      "typ": "BEGEGNUNG",
+      "beschreibung": "Ein weiser alter Mann bietet dir Tee an.",
+      "entscheidung": {
+        "sprechen": {
+          "info": "Du erhältst einen Hinweis auf einen verborgenen Schatz.",
+          "mutPlus": 1
+        },
+        "weitergehen": {
+          "wirkung": "Du gehst weiter ohne Kontakt aufzunehmen."
+        }
+      }
+    },
+    {
+      "id": "s3031",
+      "typ": "VERLUST",
+      "beschreibung": "Du verlierst ein paar Münzen in einem Spalt.",
+      "entscheidung": {
+        "akzeptieren": {
+          "wirkung": "Du nimmst den Verlust hin.",
+          "mutPlus": 1
+        },
+        "suchen": {
+          "wirkung": "Du versuchst, das Verlorene zu finden.",
+          "chance": "niedrig"
+        }
+      }
+    },
+    {
+      "id": "s3032",
+      "typ": "FALLE",
+      "beschreibung": "Ein Pfeil schießt aus der Wand.",
+      "entscheidung": {
+        "entschärfen": {
+          "wirkung": "Du versuchst, die Falle zu entschärfen.",
+          "chance": "mittel"
+        },
+        "zurückziehen": {
+          "wirkung": "Du gehst ein Stück zurück."
+        }
+      }
+    },
+    {
+      "id": "s3033",
+      "typ": "VERLUST",
+      "beschreibung": "Deine Waffe zerbricht.",
+      "entscheidung": {
+        "akzeptieren": {
+          "wirkung": "Du nimmst den Verlust hin.",
+          "mutPlus": 1
+        },
+        "suchen": {
+          "wirkung": "Du versuchst, das Verlorene zu finden.",
+          "chance": "niedrig"
+        }
+      }
+    }
+  ]
+}

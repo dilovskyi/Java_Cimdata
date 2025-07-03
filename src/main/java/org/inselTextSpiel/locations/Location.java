@@ -18,8 +18,7 @@ public class Location {
             String beschreibung,
             ArrayList<Szene> szenesArrayList,
             Location vorherigerLocation,
-            Location neachsterLocation
-    ) {
+            Location neachsterLocation) {
         this.typ = typ;
         this.titel = titel;
         this.beschreibung = beschreibung;

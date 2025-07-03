@@ -1,12 +1,10 @@
-package org.inselTextSpiel.builders;
+package org.inselTextSpiel.locations;
 
 import org.inselTextSpiel.szenen.Szene;
-import org.inselTextSpiel.locations.Location;
-import org.inselTextSpiel.locations.LocationTyp;
 
 import java.util.ArrayList;
 
-public class LocationBuilder implements Builder {
+public class LocationBuilder implements LocationBuilderInterface {
     private LocationTyp typ;
     private String titel;
     private String beschreibung;
@@ -36,10 +34,6 @@ public class LocationBuilder implements Builder {
         this.szenesArrayList = szenesArrayList;
     }
 
-    public void addScene(Szene scene) {
-        this.szenesArrayList.add(scene);
-    }
-
     //Welche Standorte sind von hier aus erreichbar
     // doppelt verkettete Liste (Doubly linked list)
     @Override
@@ -51,7 +45,7 @@ public class LocationBuilder implements Builder {
     public void setNeachsterLocation(Location location) {
         this.neachsterLocation = location;
     }
-
+    @Override
     public Location build() {
         return new Location(
                 this.typ,

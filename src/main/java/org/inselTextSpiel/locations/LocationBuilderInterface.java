@@ -1,12 +1,10 @@
-package org.inselTextSpiel.builders;
+package org.inselTextSpiel.locations;
 
 import org.inselTextSpiel.szenen.Szene;
-import org.inselTextSpiel.locations.Location;
-import org.inselTextSpiel.locations.LocationTyp;
 
 import java.util.ArrayList;
 
-public interface Builder {
+public interface LocationBuilderInterface {
     void setTyp(LocationTyp typ);
 
     void setTitel(String titel);
@@ -18,4 +16,6 @@ public interface Builder {
     void setVorherigerLocation(Location location);
 
     void setNeachsterLocation(Location location);
+
+    Location build ();
 }
