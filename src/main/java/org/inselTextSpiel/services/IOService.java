@@ -3,22 +3,17 @@ package org.inselTextSpiel.services;
 import java.util.Scanner;
 
 public class IOService {
-    final private Scanner scanner = new Scanner(System.in);
-    private JsonParser parser;
+    final static private Scanner scanner = new Scanner(System.in);
 
-    public IOService(JsonParser parser) {
-        this.parser = parser;
+    public static void ausgabe(String path, String... keys) {
+        System.out.println(JsonParser.getValue(path, keys));
     }
 
-    public void ausgabe(String path, String... keys) {
-        System.out.println(parser.getValue(path, keys));
-    }
-
-    public String antwortEinlesen() {
+    public static String antwortEinlesen() {
         return scanner.nextLine().trim().toLowerCase();
     }
 
-    public void trennlinie() {
+    public static void trennlinie() {
         System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
     }
 }

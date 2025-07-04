@@ -9,10 +9,10 @@ import java.util.Iterator;
 import java.util.Map;
 
 public class JsonParser {
-    private final Map<String, JsonNode> jsonDaten = new HashMap<>();
+    private static final Map<String, JsonNode> jsonDaten = new HashMap<>();
 
-    private JsonNode jsonLaden(String pfad) {
-        InputStream inputStream = getClass().getClassLoader().getResourceAsStream(pfad);
+    private static JsonNode jsonLaden(String pfad) {
+        InputStream inputStream = JsonParser.class.getClassLoader().getResourceAsStream(pfad);
         try {
             if (inputStream != null) {
                 return new ObjectMapper().readTree(inputStream);
@@ -24,7 +24,7 @@ public class JsonParser {
         }
     }
 
-    private JsonNode lazyLoad(String pfad) {
+    private static JsonNode lazyLoad(String pfad) {
         String p = pfad + ".json";
         JsonNode rootNode;
         if (!jsonDaten.containsKey(p)) {
@@ -36,7 +36,7 @@ public class JsonParser {
         return rootNode;
     }
 
-    public Map<String, String> getKeyValue(String pfad, String nodeName) {
+    public static Map<String, String> getKeyValue(String pfad, String nodeName) {
         Iterator<Map.Entry<String, JsonNode>> fieldEntry = lazyLoad(pfad).path(nodeName).fields();
         Map<String, String> result = new HashMap<>();
         while (fieldEntry.hasNext()) {
@@ -46,7 +46,7 @@ public class JsonParser {
         return result;
     }
 
-    public String getValue(String pfad, String[] keys) {
+    public static String getValue(String pfad, String[] keys) {
         JsonNode rootNode = lazyLoad(pfad);
         for (String key : keys) {
             rootNode = rootNode.path(key);

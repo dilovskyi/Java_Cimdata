@@ -7,40 +7,37 @@ import org.inselTextSpiel.spiel.Spielwelt;
 
 public class Main {
     public static void main(String[] args) {
-        JsonParser parser = new JsonParser();
-        Spielwelt spielwelt = new Spielwelt(parser);
-        IOService ioService = new IOService(parser);
         UserCharakter userCharakter = null;
 
-        ioService.ausgabe("spielwelt", "intro");
-        ioService.trennlinie();
+        IOService.ausgabe("spielwelt", "intro");
+        IOService.trennlinie();
         // -------
-        ioService.ausgabe("registrierung", "frage");
-        if (ioService.antwortEinlesen().contains("j")) {
-            ioService.ausgabe("registrierung", "antwortJa");
-            ioService.trennlinie();
-            ioService.ausgabe("registrierung", "name");
-            userCharakter = new UserCharakter(ioService.antwortEinlesen());
-            ioService.trennlinie();
+        IOService.ausgabe("registrierung", "frage");
+        if (IOService.antwortEinlesen().contains("j")) {
+            IOService.ausgabe("registrierung", "antwortJa");
+            IOService.trennlinie();
+            IOService.ausgabe("registrierung", "name");
+            userCharakter = new UserCharakter(IOService.antwortEinlesen());
+            IOService.trennlinie();
         } else {
-            ioService.ausgabe("registrierung", "antwortNein");
+            IOService.ausgabe("registrierung", "antwortNein");
         }
         //--------
 
-        ioService.ausgabe("charakter", "eigenschaften");
-        if (ioService.antwortEinlesen().contains("j") && userCharakter == null) {
-            ioService.ausgabe("charakter", "keinenChar");
-            ioService.ausgabe("registrierung", "name");
-            userCharakter = new UserCharakter(ioService.antwortEinlesen());
+        IOService.ausgabe("charakter", "eigenschaften");
+        if (IOService.antwortEinlesen().contains("j") && userCharakter == null) {
+            IOService.ausgabe("charakter", "keinenChar");
+            IOService.ausgabe("registrierung", "name");
+            userCharakter = new UserCharakter(IOService.antwortEinlesen());
         }
         assert userCharakter != null;
         userCharakter.schowEigenschaften();
-        ioService.trennlinie();
-        ioService.ausgabe("charakter", "setMotto");
-        userCharakter.setMotto(ioService.antwortEinlesen());
-        ioService.ausgabe("charakter", "mottoInfo");
-        ioService.trennlinie();
-        ioService.ausgabe("locations", "intro");
+        IOService.trennlinie();
+        IOService.ausgabe("charakter", "setMotto");
+        userCharakter.setMotto(IOService.antwortEinlesen());
+        IOService.ausgabe("charakter", "mottoInfo");
+        IOService.trennlinie();
+        IOService.ausgabe("locations", "intro");
         System.out.print(userCharakter.getMotto());
 
     }
